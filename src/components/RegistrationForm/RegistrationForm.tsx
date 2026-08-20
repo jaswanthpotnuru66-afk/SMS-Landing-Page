@@ -26,7 +26,7 @@ export default function RegistrationForm() {
     const formData = new FormData(form);
     
     // TODO: Replace with the Access Key sent to ottobonacademy@gmail.com
-    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY');
+    formData.append('access_key', '77cb2fa8-5672-4a48-8df1-3fbd529bcc41');
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
