@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 88px;
   display: flex;
   align-items: center;
   z-index: 1000;
@@ -13,10 +13,10 @@
 }
 
 .scrolled {
-  background-color: rgba(13, 17, 23, 0.92);
+  background-color: rgba(9, 9, 11, 0.92); /* match var(--bg-dark) */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  border-bottom: 1px solid var(--border-dark-mid);
 }
 
 .headerContainer {
@@ -30,14 +30,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
 
-/* Small yellow accent marker */
-.brandMarker {
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-yellow);
-  border-radius: 2px;
+.logoImg {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brandText {
@@ -48,41 +47,21 @@
 .wordmark {
   font-family: var(--font-display);
   font-weight: var(--weight-bold);
-  font-size: 1.125rem;
-  letter-spacing: 0.1em;
-  color: var(--text-on-dark);
-}
-
-.logoImg {
-  height: 24px;
-  width: auto;
-  object-fit: contain;
-}
-
-.wordmark {
-  font-size: 20px;
-  font-weight: var(--weight-semibold);
+  font-size: 22px; /* Visual target 145-160px overall width when combined with logo */
   letter-spacing: 0.02em;
   color: #FFFFFF;
+  line-height: 1.1;
   transition: color 0.3s ease;
 }
 
-.scrolled .wordmark {
-  color: #F0F4FF;
-}
-
 .productName {
+  font-family: var(--font-sans);
   font-size: 10px;
   color: rgba(255, 255, 255, 0.7);
   font-weight: var(--weight-medium);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   transition: color 0.3s ease;
-}
-
-.scrolled .productName {
-  color: rgba(0, 212, 255, 0.6);
-  opacity: 1;
 }
 
 .navLinks {
@@ -92,62 +71,110 @@
 }
 
 .navLink {
+  font-family: var(--font-sans);
   font-size: 15px;
   font-weight: var(--weight-medium);
   color: rgba(255, 255, 255, 0.8);
-  transition: color 0.3s ease, opacity 0.2s ease;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .navLink:hover {
-  opacity: 1;
-}
-
-.scrolled .navLink {
-  color: rgba(255, 255, 255, 0.75);
-  opacity: 1;
-}
-
-.scrolled .navLink:hover {
-  opacity: 1;
-}
-
-.cta {
-  background-color: rgba(255, 255, 255, 0.1);
   color: #FFFFFF;
-  padding: 10px 24px;
-  border-radius: var(--radius-pill);
-  font-size: 14px;
-  font-weight: var(--weight-semibold);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.desktopCtaWrapper {
+  display: block;
+}
+
+.mobileMenuTrigger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
   cursor: pointer;
-  transition: all 0.3s ease;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 
-.cta:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.mobileMenuTrigger:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  border-radius: 4px;
 }
 
-.scrolled .cta {
-  background-color: rgba(0, 212, 255, 0.08);
-  color: #F0F4FF;
-  border: 1px solid rgba(0, 212, 255, 0.25);
+.mobileMenu {
+  display: none;
 }
 
-.scrolled .cta:hover {
-  background-color: rgba(0, 212, 255, 0.15);
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
   .header {
-    height: 64px;
+    height: 72px;
   }
-  .navLinks {
-    display: none;
+  
+  .wordmark {
+    font-size: 18px;
   }
+  
   .productName {
     display: none;
   }
-  .cta {
-    padding: 8px 16px;
+  
+  .logoImg {
+    height: 28px;
+  }
+  
+  .navLinks, .desktopCtaWrapper {
+    display: none;
+  }
+  
+  .mobileMenuTrigger {
+    display: flex;
+  }
+  
+  .mobileMenu {
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .mobileNavLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .mobileNavLink {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    font-weight: var(--weight-medium);
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  
+  .mobileCta {
+    margin-top: 16px;
+    width: 100%;
   }
 }
