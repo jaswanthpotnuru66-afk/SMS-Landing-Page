@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: ottobon-landing-page
     ports:
-      - "80:80"
+      - "8085:80"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
