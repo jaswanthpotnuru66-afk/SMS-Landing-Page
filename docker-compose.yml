@@ -9,10 +9,4 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-    networks:
-      - default
-
-networks:
-  default:
-    name: bridge
-    external: true
+    network_mode: bridge
