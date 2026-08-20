@@ -1,0 +1,232 @@
+.section {
+  background-color: var(--bg-parchment);
+  padding: 100px 0;
+}
+
+.container { }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* --- Left: Premise --- */
+.premise {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.overline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: var(--weight-bold);
+  color: var(--text-on-light);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.mark {
+  color: var(--saffron);
+}
+
+.body {
+  font-size: 1.05rem;
+  color: var(--text-muted-on-light);
+  line-height: 1.75;
+  max-width: 480px;
+}
+
+/* Stats row */
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-on-light);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  min-width: 72px;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--text-muted-on-light);
+  line-height: 1.4;
+}
+
+/* --- Right: Product Frame --- */
+.productFrame {
+  background: var(--bg-dark);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-lg);
+}
+
+.frameBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--bg-dark-card);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.frameTitle {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted-on-dark);
+  letter-spacing: 0.04em;
+}
+
+.frameLive {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--status-paid);
+  letter-spacing: 0.06em;
+}
+
+/* Table */
+.tableWrap {
+  padding: 0;
+}
+
+.tableHead {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr 0.9fr 1.2fr;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-dark);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim-on-dark);
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr 0.9fr 1.2fr;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  align-items: center;
+  transition: background 0.15s ease;
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableRow:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.cellName {
+  font-size: 0.875rem;
+  font-weight: var(--weight-medium);
+  color: var(--text-on-dark);
+}
+
+/* Fee badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.06em;
+}
+
+.badge_paid {
+  background: rgba(29, 100, 68, 0.2);
+  color: #5BBF90;
+  border: 1px solid rgba(29, 100, 68, 0.4);
+}
+
+.badge_pending {
+  background: rgba(179, 92, 20, 0.2);
+  color: #D49A5A;
+  border: 1px solid rgba(179, 92, 20, 0.4);
+}
+
+.badge_partial {
+  background: rgba(200, 134, 10, 0.15);
+  color: #C8860A;
+  border: 1px solid rgba(200, 134, 10, 0.3);
+}
+
+.badge_overdue {
+  background: rgba(155, 44, 26, 0.2);
+  color: #DC7265;
+  border: 1px solid rgba(155, 44, 26, 0.4);
+}
+
+/* Attendance */
+.attBadge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+}
+
+.att_good { color: #5BBF90; }
+.att_risk { color: #DC7265; }
+
+.cellAction {
+  font-size: 0.8rem;
+  color: var(--text-dim-on-dark);
+}
+
+.frameFooter {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border-dark);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim-on-dark);
+  letter-spacing: 0.04em;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+@media (max-width: 540px) {
+  .tableHead,
+  .tableRow {
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+  }
+  .tableHead span:last-child,
+  .tableRow .cellAction {
+    display: none;
+  }
+}

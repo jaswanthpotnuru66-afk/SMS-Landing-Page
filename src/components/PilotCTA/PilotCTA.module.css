@@ -1,0 +1,269 @@
+.section {
+  background-color: var(--bg-dark);
+  padding: 120px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Header */
+.header {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: var(--weight-bold);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--text-on-dark);
+}
+
+.body {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-muted-on-dark);
+}
+
+/* Interactive Roadmap */
+.interactiveRoadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.timelineTrack {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: var(--border-dark-mid);
+  z-index: 1;
+}
+
+.timelineProgress {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  height: 2px;
+  background: var(--accent-primary);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  filter: blur(4px);
+  animation: pulseMove 3s infinite linear;
+}
+
+@keyframes pulseMove {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(1000px); }
+}
+
+.timelineNodes {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+}
+
+.nodeBtn {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  padding: 0;
+  width: 120px;
+  transition: transform 0.2s ease;
+}
+
+.nodeBtn:hover {
+  transform: translateY(-4px);
+}
+
+.nodeDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  border: 4px solid var(--border-dark-mid);
+  transition: all 0.3s ease;
+}
+
+.nodeTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-muted-on-dark);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+/* Past State */
+.pastNode .nodeDot {
+  border-color: var(--accent-primary);
+  background: var(--bg-dark);
+}
+.pastNode .nodeTitle {
+  color: var(--text-on-dark);
+}
+
+/* Active State */
+.activeNode .nodeDot {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary);
+  box-shadow: 0 0 16px rgba(67, 56, 202, 0.5);
+}
+.activeNode .nodeTitle {
+  color: var(--accent-primary);
+}
+
+/* Active Content Card */
+.activeContentWrapper {
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.contentCard {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark-mid);
+  border-radius: var(--radius-large);
+  padding: 48px;
+  max-width: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: var(--weight-bold);
+  color: var(--text-on-dark);
+}
+
+.cardSubtitle {
+  font-size: 1.1rem;
+  font-weight: var(--weight-medium);
+  color: var(--accent-primary);
+}
+
+.cardDetails {
+  font-size: 1.05rem;
+  color: var(--text-muted-on-dark);
+  line-height: 1.7;
+}
+
+/* Action */
+.action {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-primary);
+  color: #FFFFFF;
+  padding: 18px 40px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.3);
+}
+
+.btnText {
+  position: relative;
+  z-index: 2;
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
+  box-shadow: 0 8px 24px rgba(67, 56, 202, 0.5);
+}
+
+@media (max-width: 768px) {
+  .roadLine {
+    top: 0;
+    bottom: 0;
+    left: 31px;
+    height: auto;
+    width: 2px;
+    right: auto;
+  }
+  
+  .roadProgress {
+    height: 0;
+    width: 100%;
+    /* Note: Animation would need vertical adjust for mobile in TSX if strict */
+  }
+
+  .roadSteps {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .roadStep {
+    flex-direction: row;
+    gap: 24px;
+  }
+}

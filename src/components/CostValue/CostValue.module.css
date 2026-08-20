@@ -1,0 +1,188 @@
+.section {
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Header */
+.header {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.overline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: var(--weight-bold);
+  color: var(--text-on-dark);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.body {
+  font-size: 1.05rem;
+  color: var(--text-muted-on-dark);
+  line-height: 1.75;
+  max-width: 580px;
+}
+
+/* Comparison Layout */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Ledger Card */
+.ledgerCard {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.ledgerCardRed {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.ledgerHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.ledgerTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark);
+}
+
+.badgeTracked, .badgeUntracked {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.badgeTracked {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--status-paid);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.badgeUntracked {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--status-overdue);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.ledgerRows {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px dashed rgba(255,255,255,0.08);
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  font-size: 0.95rem;
+  color: var(--text-muted-on-dark);
+}
+
+.rowVal {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark);
+}
+
+.rowValRed {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: var(--weight-bold);
+  color: var(--status-overdue);
+  line-height: 1;
+}
+
+.ledgerTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  background: rgba(16, 185, 129, 0.05);
+  border-top: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.ledgerTotalRed {
+  background: rgba(239, 68, 68, 0.05);
+  border-top: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.totalLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim-on-dark);
+}
+
+.totalVal {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: var(--weight-bold);
+  color: var(--status-paid);
+}
+
+.totalValRed {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: var(--weight-bold);
+  color: var(--status-overdue);
+}
+
+@media (max-width: 860px) {
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}

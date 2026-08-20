@@ -1,0 +1,143 @@
+.container {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+/* Dark section environment — authority, management, trust */
+.section-dark {
+  background-color: var(--color-near-black);
+  color: var(--color-text-dark);
+}
+
+/* Light section environment — institution, records, cream */
+.section-light {
+  background-color: var(--color-cream);
+  color: var(--color-text-light);
+}
+
+/* Eyebrow utility — yellow accent above headlines */
+.eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: var(--color-yellow);
+}
+
+/* Typographic scale */
+.headline-hero {
+  font-size: clamp(3rem, 5vw, 4.25rem);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.headline-section-statement {
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.headline-section {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.supporting-statement {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  opacity: 0.8;
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+/* Primary CTA — Near Black bg, Cream text */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-near-black);
+  color: var(--color-cream);
+  padding: 14px 28px;
+  border-radius: var(--radius-button);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-charcoal);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--color-yellow);
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Secondary CTA — transparent, Near Black text + border */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--color-text-light);
+  padding: 14px 28px;
+  border-radius: var(--radius-button);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  border: 1px solid var(--color-warm-grey);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-text-light);
+  background-color: rgba(23, 24, 26, 0.04);
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--color-near-black);
+  outline-offset: 2px;
+}
+
+/* Yellow CTA — primary campaign action */
+.btn-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-yellow);
+  color: var(--color-near-black);
+  padding: 14px 28px;
+  border-radius: var(--radius-button);
+  font-weight: var(--weight-semibold);
+  font-size: 16px;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-yellow:hover {
+  background-color: var(--color-yellow-hover);
+}
+
+.btn-yellow:focus-visible {
+  outline: 3px solid var(--color-near-black);
+  outline-offset: 2px;
+}
+
+.btn-yellow:active {
+  transform: scale(0.98);
+}

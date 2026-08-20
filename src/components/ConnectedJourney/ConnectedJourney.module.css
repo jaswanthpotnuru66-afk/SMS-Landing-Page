@@ -1,0 +1,125 @@
+.journeySection {
+  background-color: var(--color-soft-cream);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pipelineContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.pipeline {
+  position: relative;
+  width: 100%;
+}
+
+.baseLine {
+  position: absolute;
+  top: 15px; /* Center with the nodes */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-deep-ink-new);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.progressLine {
+  position: absolute;
+  top: 15px; /* Center with the nodes */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-emerald-teal);
+  z-index: 1;
+}
+
+.stepsWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 120px;
+}
+
+.node {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid var(--color-soft-neutral);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.innerDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+/* Semantic Node Tints */
+.nodeSky { border-color: var(--color-clear-sky); }
+.nodeSky .innerDot { background-color: var(--color-clear-blue); }
+
+.nodeButter { border-color: var(--color-sunny-butter); }
+.nodeButter .innerDot { background-color: var(--color-golden-amber); }
+
+.nodeMint { border-color: var(--color-fresh-mint); }
+.nodeMint .innerDot { background-color: var(--color-emerald-teal); }
+
+.nodeCoral { border-color: var(--color-coral-mist); }
+.nodeCoral .innerDot { background-color: var(--color-coral); }
+
+.nodePeach { border-color: var(--color-warm-peach); }
+.nodePeach .innerDot { background-color: var(--color-peach-strong); }
+
+.label {
+  font-size: 14px;
+  font-weight: var(--weight-medium);
+  color: var(--color-deep-ink-new);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pipelineContainer {
+    padding: 0 24px;
+  }
+  .baseLine, .progressLine {
+    top: 0;
+    left: 15px; /* Center vertically */
+    width: 2px;
+    height: 100%;
+    transform-origin: top !important;
+  }
+  .stepsWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+  .step {
+    flex-direction: row;
+    width: auto;
+  }
+}

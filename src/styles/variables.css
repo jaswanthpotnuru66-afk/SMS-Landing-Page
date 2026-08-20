@@ -1,0 +1,94 @@
+:root {
+  /* =============================================
+     OTTOBON — PREMIUM B2B SAAS PALETTE
+     
+     High contrast, stark blacks and whites.
+     Accents are bright, saturated, and used with high precision.
+     Inspired by premium dev-tools and fintech (Stripe, Linear, Vercel).
+     ============================================= */
+
+  /* --- Section Backgrounds --- */
+  --bg-dark:         #09090B;   /* Zinc 950 - Extremely dark, near black */
+  --bg-dark-card:    #18181B;   /* Zinc 900 - Subtle elevation */
+  --bg-dark-raised:  #27272A;   /* Zinc 800 - Secondary elevation */
+  
+  --bg-light:        #FFFFFF;   /* Pure crisp white */
+  --bg-light-card:   #F4F4F5;   /* Zinc 100 - Clean, subtle contrast */
+  --bg-deepest:      #000000;   /* Pure black for footer/headers */
+
+  /* --- Text — Dark Sections --- */
+  --text-on-dark:        #FAFAFA;   /* Zinc 50 - Bright readable white */
+  --text-muted-on-dark:  #A1A1AA;   /* Zinc 400 - Muted grey */
+  --text-dim-on-dark:    #71717A;   /* Zinc 500 - Dim grey */
+
+  /* --- Text — Light Sections --- */
+  --text-on-light:       #09090B;   /* Zinc 950 - Near black */
+  --text-muted-on-light: #52525B;   /* Zinc 600 - Medium grey */
+  --text-dim-on-light:   #A1A1AA;   /* Zinc 400 - Dim grey */
+
+  /* --- Brand Accents — Bright & Premium --- */
+  --accent-primary:  #4338CA;   /* Bright Indigo - Primary brand color */
+  --accent-hover:    #4F46E5;   /* Lighter hover */
+  --accent-tint:     rgba(79, 70, 229, 0.1); 
+  
+  --accent-secondary:#2563EB;   /* Vibrant Blue */
+
+  /* --- Status — Used ONLY inside product UI mockups --- */
+  --status-paid:     #10B981;   /* Bright Emerald Green */
+  --status-pending:  #F59E0B;   /* Bright Amber */
+  --status-overdue:  #EF4444;   /* Bright Red */
+  --status-neutral:  #71717A;   /* Neutral grey */
+
+  /* --- Borders --- */
+  --border-light:    rgba(0, 0, 0, 0.08);   /* Clean, crisp border on white */
+  --border-dark:     rgba(255, 255, 255, 0.08); /* Clean border on dark */
+  --border-dark-mid: rgba(255, 255, 255, 0.12); /* Slightly more visible */
+
+  /* Semantic aliases for backward compat with remaining components */
+  --saffron:            var(--accent-primary);
+  --saffron-light:      var(--accent-hover);
+  --bg-parchment:       var(--bg-light);
+  --color-bg:           var(--bg-light);
+  --color-white:        #FFFFFF;
+  --color-deep-navy:    var(--bg-dark);
+  --color-navy-surface: var(--bg-dark-card);
+  --color-dark:         var(--bg-deepest);
+  --color-charcoal:     var(--bg-dark);
+  --color-paper:        var(--bg-light);
+  --color-brand:        var(--accent-primary);
+  --color-brand-hover:  var(--accent-hover);
+  --color-success:      var(--status-paid);
+  --color-danger:       var(--status-overdue);
+  --color-text:         var(--text-on-dark);
+  --color-text-muted:   var(--text-muted-on-dark);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-muted-on-dark:var(--text-muted-on-dark);
+  --color-border:       var(--border-dark);
+
+  /* --- Typography --- */
+  --font-display:  "Cabinet Grotesk", system-ui, sans-serif;
+  --font-sans:     "Cabinet Grotesk", system-ui, sans-serif;
+  --font-mono:     "JetBrains Mono", "Fira Code", monospace;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* --- Layout --- */
+  --max-width-content: 1280px;
+
+  /* --- Shape --- */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-pill: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-sm:   0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:   0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.03);
+  --shadow-lg:   0 10px 15px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.03);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.04);
+}

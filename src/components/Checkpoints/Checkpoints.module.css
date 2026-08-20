@@ -1,0 +1,173 @@
+.section {
+  background-color: var(--bg-dark);
+  padding: 100px 0;
+}
+
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--saffron);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: var(--weight-bold);
+  color: var(--text-on-dark);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.body {
+  font-size: 1rem;
+  color: var(--text-muted-on-dark);
+  line-height: 1.75;
+  max-width: 420px;
+}
+
+.chainWrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.chain {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  position: sticky;
+}
+
+/* Document card — styled like an actual physical register */
+.doc {
+  background: var(--bg-dark-card);
+  border: 1px solid var(--border-dark-mid);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.doc:hover {
+  border-color: rgba(200, 134, 10, 0.25);
+}
+
+/* Ruling lines — like actual paper */
+.docRuling {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.docLine {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 1px;
+}
+
+.docLine:first-child { width: 100%; }
+.docLine:nth-child(2) { width: 75%; }
+.docLine:nth-child(3) { width: 50%; }
+
+.docLabel {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: var(--weight-semibold);
+  color: var(--text-on-dark);
+  margin-bottom: 6px;
+}
+
+.docDesc {
+  font-size: 0.82rem;
+  color: var(--text-muted-on-dark);
+  line-height: 1.5;
+}
+
+/* Goal doc (final = Management Report) */
+.docGoal {
+  border-color: rgba(200, 134, 10, 0.4);
+  background: linear-gradient(rgba(200, 134, 10, 0.06), rgba(200, 134, 10, 0.06)), var(--bg-dark-card);
+}
+
+.docGoal .docLabel {
+  color: var(--saffron-light);
+}
+
+/* Connector */
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 8px 24px 24px;
+}
+
+.connLine {
+  width: 1px;
+  height: 14px;
+  background: transparent;
+}
+
+.connBadge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--status-pending);
+  background: rgba(179, 92, 20, 0.1);
+  border: 1px solid rgba(179, 92, 20, 0.25);
+  padding: 3px 12px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .header {
+    position: static;
+  }
+}
