@@ -144,7 +144,7 @@
   box-shadow: 0 0 16px rgba(67, 56, 202, 0.5);
 }
 .activeNode .nodeTitle {
-  color: var(--accent-primary);
+  color: var(--accent-bright);
 }
 
 /* Active Content Card */
@@ -177,7 +177,7 @@
 .cardSubtitle {
   font-size: 1.1rem;
   font-weight: var(--weight-medium);
-  color: var(--accent-primary);
+  color: var(--accent-bright);
 }
 
 .cardDetails {

@@ -40,7 +40,7 @@
   font-family: var(--font-sans);
   font-size: 13px;
   font-weight: var(--weight-medium);
-  color: var(--accent-primary);
+  color: var(--accent-bright);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
@@ -84,7 +84,7 @@
 }
 
 .trustIcon {
-  color: var(--accent-primary);
+  color: var(--accent-bright);
   flex-shrink: 0;
 }
 

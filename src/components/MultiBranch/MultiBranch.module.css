@@ -23,7 +23,7 @@
   font-weight: var(--weight-bold);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent-primary);
+  color: var(--accent-bright);
 }
 
 .headline {

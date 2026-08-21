@@ -48,7 +48,7 @@ export default function RegistrationForm() {
           setSubmitError("Oops! There was a problem submitting your form");
         }
       }
-    } catch (error) {
+    } catch {
       setSubmitError("Oops! There was a problem submitting your form");
     } finally {
       setIsSubmitting(false);

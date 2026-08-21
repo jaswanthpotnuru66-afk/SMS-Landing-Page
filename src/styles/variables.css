@@ -30,6 +30,7 @@
   --accent-primary:  #4338CA;   /* Bright Indigo - Primary brand color */
   --accent-hover:    #4F46E5;   /* Lighter hover */
   --accent-tint:     rgba(79, 70, 229, 0.1); 
+  --accent-bright:   #818CF8;   /* Brighter indigo for dark backgrounds */
   
   --accent-secondary:#2563EB;   /* Vibrant Blue */
 
